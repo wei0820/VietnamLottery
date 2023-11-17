@@ -1,0 +1,11 @@
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "versionCode": 16,
+        "versionName": "1.0.16",
+
+        "url": "https://pay.channel-lucky.com/apk/jingyupay.apk"
+       
+    }
+}
