@@ -109,32 +109,6 @@ class NotificationsFragment : Fragment() ,View.OnClickListener{
 
     override fun onResume() {
         super.onResume()
-        personalViewModel.get(requireActivity()).observe(requireActivity(), Observer {
-
-            var array = it.data.apIs.split("|");
-
-            PayHelperUtils.saveOpenUrl(context,array.get(0).toString())
-
-            PayHelperUtils.isShowNews(context,it.data.note)
-
-            PayHelperUtils.saveRebate(context,it.data.rebate.toString())
-            PayHelperUtils.savePaymentXeRebate(context,it.data.paymentXeRebate.toString())
-            PayHelperUtils.saveAlipayRebate(context,it.data.alipayRebate.toString())
-            text1.text = it.data.commission.toString()
-            text2.text = it.data.quota.toString()
-            text3.text = it.data.frozen.toString()
-            text4.text = it.data.payment.toString()
-            text5.text = it.data.collection.toString()
-            name.text=  PayHelperUtils.getUserName(context)
-
-
-
-        })
-
-        getActivityData()
-
-
-
 
     }
 
@@ -152,32 +126,7 @@ class NotificationsFragment : Fragment() ,View.OnClickListener{
         }
     }
 
-    fun  getActivityData(){
-        val activity: MainActivity? = activity as MainActivity?
 
-        var boolean = activity!!.getData()
-
-        if (boolean){
-            val dialog = AddGoogleDialog(requireActivity())
-            dialog.setAddBankCallback {
-                if (it!=null){
-                    viewLifecycleOwner.lifecycleScope.launch {
-                        if (it.code==0){
-                            ToastManager.showToastCenter(requireActivity(),it.msg)
-                            dialog.dismiss()
-
-                        }else{
-                            ToastManager.showToastCenter(requireActivity(),it.msg)
-
-                        }
-                    }
-                }
-            }
-            dialog.show()
-
-        }
-
-    }
 
 
 }

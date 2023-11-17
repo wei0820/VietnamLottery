@@ -47,6 +47,7 @@
                     android:textSize="18sp"/>
 
                 <LinearLayout
+                    android:visibility="invisible"
                     android:orientation="horizontal"
                     android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
@@ -117,6 +118,8 @@
 
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="invisible"
+
                     android:orientation="horizontal"
                     android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
@@ -202,7 +205,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/img3"
-                    android:text="团队管理"></TextView>
+                    android:text="邀请码"></TextView>
                 <RelativeLayout
                     android:visibility="gone"
                     android:layout_marginLeft="16dp"
@@ -259,7 +262,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginLeft="22dp"
                         android:layout_toRightOf="@+id/img2"
-                        android:text="团队成员"></TextView>
+                        android:text="填写邀请码"></TextView>
                     <ImageView
                         android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
@@ -294,7 +297,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginLeft="22dp"
                         android:layout_toRightOf="@+id/img13"
-                        android:text="团队报表"></TextView>
+                        android:text="我的邀请码"></TextView>
                     <ImageView
                         android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
@@ -304,6 +307,7 @@
                         ></ImageView>
                 </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="invisible"
                     android:id="@+id/reportday_layout"
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="16dp"
@@ -338,6 +342,8 @@
 
             </LinearLayout>
             <LinearLayout
+                android:visibility="invisible"
+
                 android:layout_marginTop="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -482,6 +488,8 @@
                 </RelativeLayout>
             </LinearLayout>
             <LinearLayout
+                android:visibility="invisible"
+
                 android:layout_marginTop="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -529,6 +537,8 @@
 
             </LinearLayout>
             <LinearLayout
+                android:visibility="invisible"
+
                 android:layout_marginTop="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

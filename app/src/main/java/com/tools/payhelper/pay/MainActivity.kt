@@ -42,12 +42,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        getData()
     }
 
-    fun  getData() : Boolean{
-        return  intent.getBooleanExtra("google",false)
 
-    }
 
 }

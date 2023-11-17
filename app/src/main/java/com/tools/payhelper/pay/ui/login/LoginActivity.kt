@@ -47,8 +47,8 @@ class LoginActivity : BasicActivity() {
         edt2 = findViewById(R.id.edt2)
         edt3 = findViewById(R.id.edt3)
 
-        check()
-        checkVresion()
+//        check()
+//        checkVresion()
 
         loginButton.setOnClickListener {
             var loginid = edt.text.toString()
@@ -64,37 +64,12 @@ class LoginActivity : BasicActivity() {
 
                 return@setOnClickListener
             }
-            loginViewModel.getUserToken(loginid,PayHelperUtils.md5(password),code).observe(this, Observer {
-                if (it!=null){
-                    runOnUiThread {
-                        if (it.code==1){
-                            if(!it.msg.isEmpty()){
-                                ToastManager.showToastCenter(this,it.msg)
-                                return@runOnUiThread
-
-                            }
-                        }else{
-                            ToastManager.showToastCenter(this,it.msg)
-
-                            PayHelperUtils.saveUserLoginToken(this,it.data.token)
-                            PayHelperUtils.saveUserLoginName(this,loginid)
-                            var intent  = Intent()
-                            var bundle =  Bundle()
-                            bundle.putBoolean("google",it.data.google)
-                            intent.putExtras(bundle)
-                            intent.setClass(this, MainActivity::class.java)
-                            startActivity(intent)
-
-                        }
-
-                    }
-                }
-
-
-            })
 
 
 
+            var intent  = Intent()
+            intent.setClass(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
 

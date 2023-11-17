@@ -79,7 +79,7 @@
         ></EditText>
 
     <TextView
-
+        android:visibility="invisible"
         android:id="@+id/text3"
         app:layout_constraintTop_toBottomOf="@+id/text2"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -94,6 +94,8 @@
         ></TextView>
 
     <EditText
+        android:visibility="invisible"
+
         android:layout_width="160dp"
         android:layout_height="0dp"
         android:singleLine="true"

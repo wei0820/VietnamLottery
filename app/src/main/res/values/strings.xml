@@ -45,5 +45,12 @@
     <item>錯誤回調訊息</item>
 
 </string-array>
+    <string name="main_string_1">启动</string>
+    <string name="main_string_2">投注记录</string>
+    <string name="main_string_3">统计</string>
+    <string name="main_string_4">我的账户</string>
+
+
+
 
 </resources>
